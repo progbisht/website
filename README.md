@@ -1,70 +1,89 @@
 <div align="center">
-  <a href="https://github.com/karthikmudunuri/eldoraui">
-
- <img src="https://github.com/user-attachments/assets/54c559b8-0dd1-4ef8-a3d0-06f5086224b0" alt="Logo" width="60" height="60">
+  <a href="https://github.com/your-org/your-repo">
+    <img src="https://github.com/user-attachments/assets/54c559b8-0dd1-4ef8-a3d0-06f5086224b0" alt="Logo" width="60" height="60">
   </a>
-  <h1 align="center">Eldora UI</h1>
+
+  <h1 align="center">ApniCompany</h1>
+
   <p align="center">
-   open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
-100% open-source, and customizable.
+    A modern service-based technology company delivering scalable digital solutions
+    in Engineering, Cloud, Data & AI, CX, and Digital Marketing.
+    <br />
+    Built with performance, reliability, and impact in mind.
   </p>
-  <p>
-    
-   <a href="https://www.eldoraui.site/">Visit site</a>
+
+  <p align="center">
+    <a href="https://www.apnicompany.com/">Visit Website</a>
     ·
-    <a href="https://github.com/karthikmudunuri/eldoraui/issues">Report Bug</a>
+    <a href="https://github.com/your-org/your-repo/issues">Report Bug</a>
     ·
-    <a href="https://github.com/karthikmudunuri/eldoraui/issues">Request Feature</a>
+    <a href="https://github.com/your-org/your-repo/issues">Request Feature</a>
   </p>
 </div>
 
-<!-- ABOUT THE TEMPLATE -->
+---
 
-<div align="center mt-5">
+<div align="center">
 
- <img width="1420" alt="saas-landing" src="https://github.com/user-attachments/assets/fcaf6b8d-004b-41d5-a1f8-8b609d626950">
+<img width="1420" alt="service-based-landing" src="https://github.com/user-attachments/assets/fcaf6b8d-004b-41d5-a1f8-8b609d626950">
 
- 
 </div>
 
-# Saas Landing Page
+---
 
-Template for saas landing page with dark theme using Next.js 14, React, TailwindCSS, Framer motion
+# ApniCompany Landing Page
 
-# Features
+A professional **service-based company landing page** designed to showcase enterprise services,
+capabilities, and business value propositions.
 
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Eldora UI
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+This template is ideal for:
 
-# Getting Started Locally
+- IT Services & Consulting Companies
+- Digital Engineering Firms
+- Cloud & DevOps Providers
+- Data & AI Solution Providers
+- Marketing & CX Agencies
 
-1. Clone this repository to your local machine:
+---
+
+## Services Highlighted
+
+- Digital Engineering & Product Development
+- Cloud & DevOps Solutions
+- Data Engineering & AI/ML
+- CX & Experience Design
+- Digital Marketing & Growth
+- Staffing & Recruiting Solutions
+
+---
+
+## Features
+
+- Built using **Next.js 14, React, TypeScript**
+- Styled with **Tailwind CSS & Shadcn/UI**
+- Smooth animations using **Framer Motion**
+- Modular and reusable components
+- Fully responsive (mobile, tablet, desktop)
+- Optimized for **SEO, performance, and Vercel deployment**
+- Clean, enterprise-grade UI/UX suitable for B2B clients
+
+---
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Frontend**: React, TypeScript
+- **Styling**: Tailwind CSS, Shadcn/UI
+- **Animations**: Framer Motion
+- **Deployment**: Vercel
+- **UI Components**: Eldora UI
+
+---
+
+## Getting Started Locally
+
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/karthikmudunuri/portfolio-template
+   git clone https://github.com/your-org/your-repo
    ```
-
-2. Move to the cloned directory
-
-   ```bash
-   cd portfolio-template
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-4. Start the local Server:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open the [Components](https://github.com/karthikmudunuri/saas-landing-page-template/tree/main/src/components) folder and make changes
-
-# License
-
-Licensed under the [MIT license](https://github.com/karthikmudunuri/saas-landing-page-template/blob/main/LICENSE.md).
