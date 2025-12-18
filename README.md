@@ -25,7 +25,7 @@
 
 <div align="center">
 
-<img width="1420" alt="service-based-landing" src="https://github.com/user-attachments/assets/fcaf6b8d-004b-41d5-a1f8-8b609d626950">
+<img width="1420" alt="service-based-landing" src="">
 
 </div>
 
