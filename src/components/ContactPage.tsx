@@ -167,7 +167,7 @@ export const ContactPage = () => {
                     className="mt-1 w-4 h-4 rounded border-white/20 bg-white/5"
                   />
                   <span className="text-sm text-white/70">
-                    Send me occasional information about Eldora UI news and
+                    Send me occasional information about ApniCompany news and
                     events
                   </span>
                 </label>

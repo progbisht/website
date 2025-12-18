@@ -49,16 +49,15 @@ const navigationItems = [
     submenu: {
       columns: [
         {
-          heading: "Our organization",
+          heading: "Company",
           links: [
             { label: "About Us", href: "/about" },
             { label: "Leadership", href: "/about/leadership" },
             { label: "Locations", href: "/about/locations" },
-            { label: "Awards", href: "/about/awards" },
           ],
         },
         {
-          heading: "How we serve",
+          heading: "Our Approach",
           links: [
             { label: "Consulting", href: "/services/consulting" },
             { label: "Technology", href: "/services/technology" },
@@ -85,6 +84,10 @@ export const Navbar = () => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
 
+  const toggleDesktopDropdown = (index: number) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
   return (
     <nav className="bg-black text-white fixed top-0 left-0 right-0 z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4">
@@ -98,12 +101,7 @@ export const Navbar = () => {
           {/* Desktop Navigation - Centered */}
           <div className="hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
             {navigationItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative"
-                onMouseEnter={() => item.submenu && setActiveDropdown(index)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
+              <div key={index} className="relative">
                 {item.href ? (
                   <Link
                     href={item.href}
@@ -112,36 +110,50 @@ export const Navbar = () => {
                     {item.title}
                   </Link>
                 ) : (
-                  <button className="px-4 py-2 text-sm hover:text-white/80 transition-colors flex items-center gap-1 text-white/90">
+                  <button
+                    onClick={() => toggleDesktopDropdown(index)}
+                    className="px-4 py-2 text-sm hover:text-white/80 transition-colors flex items-center gap-1 text-white/90"
+                  >
                     {item.title}
-                    {item.submenu && <ChevronDown className="w-4 h-4" />}
+                    {item.submenu && (
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${
+                          activeDropdown === index ? "rotate-180" : ""
+                        }`}
+                      />
+                    )}
                   </button>
                 )}
 
-                {/* Mega Menu Dropdown */}
+                {/* Mega Menu Dropdown - Now positioned from navbar bottom */}
                 {item.submenu && activeDropdown === index && (
-                  <div className="absolute top-full left-0 w-screen max-w-4xl bg-black border border-white/10 shadow-2xl mt-0">
-                    <div className="p-8">
-                      <div className="grid grid-cols-2 gap-12">
-                        {item.submenu.columns.map((column, colIndex) => (
-                          <div key={colIndex}>
-                            <h3 className="text-xs font-semibold text-white/60 uppercase tracking-wider mb-4">
-                              {column.heading}
-                            </h3>
-                            <ul className="space-y-3">
-                              {column.links.map((link, linkIndex) => (
-                                <li key={linkIndex}>
-                                  <Link
-                                    href={link.href}
-                                    className="text-sm text-white/80 hover:text-white transition-colors block"
-                                  >
-                                    {link.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
+                  <div
+                    className="fixed left-0 right-0 bg-black border-t border-white/10 shadow-2xl"
+                    style={{ top: "64px" }} // 64px = h-16 (navbar height)
+                  >
+                    <div className="max-w-7xl mx-auto px-4">
+                      <div className="p-8">
+                        <div className="grid grid-cols-2 gap-12">
+                          {item.submenu.columns.map((column, colIndex) => (
+                            <div key={colIndex}>
+                              <h3 className="text-xs font-semibold text-white/60 uppercase tracking-wider mb-4">
+                                {column.heading}
+                              </h3>
+                              <ul className="space-y-3">
+                                {column.links.map((link, linkIndex) => (
+                                  <li key={linkIndex}>
+                                    <Link
+                                      href={link.href}
+                                      className="text-sm text-white/80 hover:text-white transition-colors block"
+                                    >
+                                      {link.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -1,58 +1,63 @@
-"use client"
+"use client";
 import { useState } from "react";
 import PlusIcon from "../assets/icons/plus.svg";
 import MinusIcon from "../assets/icons/minus.svg";
-import clsx from "clsx";
-import {motion , AnimatePresence} from 'framer-motion';
+import { motion, AnimatePresence } from "framer-motion";
 const items = [
   {
-    question: "What payment methods do you accept?",
+    question: "What types of IT services do you provide?",
     answer:
-      "We accept all major credit cards, PayPal, and various other payment methods depending on your location. Please contact our support team for more information on accepted payment methods in your region.",
+      "We offer comprehensive IT consulting services including cloud infrastructure, cybersecurity solutions, software development, system integration, digital transformation, and ongoing technical support. Our services are tailored to meet your specific business needs and industry requirements.",
   },
   {
-    question: "How does the pricing work for teams?",
+    question: "How do you ensure service quality and reliability?",
     answer:
-      "Our pricing is per user, per month. This means you only pay for the number of team members you have on your account. Discounts are available for larger teams and annual subscriptions.",
+      "We maintain strict SLA commitments with 99.9% uptime guarantees, 24/7 monitoring, and dedicated support teams. Our ISO-certified processes and rigorous quality assurance protocols ensure consistent, reliable service delivery across all engagements.",
   },
   {
-    question: "Can I change my plan later?",
+    question:
+      "Can you integrate with our existing systems and third-party tools?",
     answer:
-      "Yes, you can upgrade or downgrade your plan at any time. Changes to your plan will be prorated and reflected in your next billing cycle.",
+      "Absolutely. We specialize in seamless integration with existing infrastructure and third-party platforms. Our team conducts thorough compatibility assessments and implements custom integration solutions to ensure smooth interoperability without disrupting your current operations.",
   },
   {
-    question: "Is my data secure?",
+    question: "How do you handle data security and compliance?",
     answer:
-      "Security is our top priority. We use state-of-the-art encryption and comply with the best industry practices to ensure that your data is stored securely and accessed only by authorized users.",
+      "Security and compliance are foundational to our service delivery. We adhere to industry standards including ISO 27001, SOC 2, GDPR, and HIPAA where applicable. All data is encrypted in transit and at rest, with multi-layered security controls, regular audits, and strict access management protocols to protect your sensitive information.",
   },
 ];
 
-const AccordinationItem = ({question, answer}:{question:string, answer: string}) => {
-  const[isOpen, setIsOpen] = useState(false);
-  return(
-   
-    <div className=" py-7 border-b border-white/30" onClick={() => setIsOpen(!isOpen)}>
-    <div className="flex items-center ">
-      <span className="flex-1 text-lg font-bold">{question}</span>
-      {isOpen ? <MinusIcon /> :<PlusIcon />}
-      
+const AccordinationItem = ({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div
+      className=" py-7 border-b border-white/30"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <div className="flex items-center ">
+        <span className="flex-1 text-lg font-bold">{question}</span>
+        {isOpen ? <MinusIcon /> : <PlusIcon />}
       </div>
       <AnimatePresence>
-      {isOpen && (
-        <motion.div 
-        initial={{opacity: 0, height: 0, marginTop: 0}}
-        animate={{opacity: 1, height: "auto" , marginTop:'16px'}}
-        exit={{opacity: 0, height: 0, marginTop: 0}}
-          >{answer}</motion.div>
-
-      )}
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0, marginTop: 0 }}
+            animate={{ opacity: 1, height: "auto", marginTop: "16px" }}
+            exit={{ opacity: 0, height: 0, marginTop: 0 }}
+          >
+            {answer}
+          </motion.div>
+        )}
       </AnimatePresence>
-    
-  </div>
-  
-    
-  )
-}
+    </div>
+  );
+};
 
 export const FAQs = () => {
   return (
@@ -62,11 +67,15 @@ export const FAQs = () => {
           Frequently Asked Questions
         </h2>
         <div className="mt-12 max-w-[648px] mx-auto">
-         {items.map(({question, answer}) => (
-            <AccordinationItem question={question} answer={answer} key={question}/>
-         ))}
+          {items.map(({ question, answer }) => (
+            <AccordinationItem
+              question={question}
+              answer={answer}
+              key={question}
+            />
+          ))}
         </div>
       </div>
     </div>
-  )
+  );
 };

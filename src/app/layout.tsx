@@ -6,8 +6,8 @@ import "./globals.css";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Saas Template - EldoraUI",
-  description: "Template for saas applications with dark theme",
+  title: "IT Services - ApniCompany",
+  description: "ApniCompnay all in one solutions for IT Industry",
 };
 
 export default function RootLayout({

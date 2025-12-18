@@ -1,4 +1,4 @@
-import { DataAIPage } from "@/components/DataAIPage";
+import { AboutPage } from "@/components/AboutPage";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 
@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <DataAIPage />
+      <AboutPage />
       <Footer />
     </>
   );

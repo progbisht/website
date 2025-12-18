@@ -76,7 +76,7 @@ This template is ideal for:
 - **Styling**: Tailwind CSS, Shadcn/UI
 - **Animations**: Framer Motion
 - **Deployment**: Vercel
-- **UI Components**: Eldora UI
+- **UI Components**: ApniCompany
 
 ---
 
