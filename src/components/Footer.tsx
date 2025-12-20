@@ -228,7 +228,8 @@ export const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-white/60 text-sm text-center md:text-left">
-              &copy; {new Date().getFullYear()} Intell. All rights reserved.
+              &copy; {new Date().getFullYear()} Apni Company. All rights
+              reserved.
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <Link
@@ -242,18 +243,6 @@ export const Footer = () => {
                 className="text-white/60 hover:text-white transition-colors"
               >
                 Terms of Service
-              </Link>
-              <Link
-                href="/cookies"
-                className="text-white/60 hover:text-white transition-colors"
-              >
-                Cookie Policy
-              </Link>
-              <Link
-                href="/sitemap"
-                className="text-white/60 hover:text-white transition-colors"
-              >
-                Sitemap
               </Link>
             </div>
           </div>

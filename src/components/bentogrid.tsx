@@ -58,10 +58,12 @@ const ServiceCard = ({
   icon,
   title,
   description,
+  link,
 }: {
   icon: string;
   title: string;
   description: string;
+  link: string;
 }) => {
   return (
     <div className="flex flex-col justify-center h-full items-center relative p-6">
@@ -85,7 +87,9 @@ const ServiceCard = ({
         />
       </div>
       <div className="text-center">
-        <h1 className="text-white text-2xl font-bold mb-2">{title}</h1>
+        <h1 className="text-white text-2xl font-bold mb-2 hover:bg-gradient-to-r hover:from-pink-400 hover:to-purple-500 hover:bg-clip-text hover:text-transparent transition-all duration-300">
+          <a href={link}>{title}</a>
+        </h1>
         <p className="text-gray-400 text-base">{description}</p>
       </div>
     </div>
@@ -101,6 +105,7 @@ const BentoBox1 = () => {
             icon={serviceLogos.digitalEngineering}
             title="Digital Engineering"
             description="Build innovative digital solutions with cutting-edge engineering practices and modern technologies."
+            link="/services/digital-engineering"
           />
         </CardWithEffect>
 
@@ -109,6 +114,7 @@ const BentoBox1 = () => {
             icon={serviceLogos.staffing}
             title="Staffing & Recruiting"
             description="Connect with top talent and build high-performing teams with our expert recruitment services."
+            link="/services/staffing"
           />
         </CardWithEffect>
 
@@ -117,6 +123,7 @@ const BentoBox1 = () => {
             icon={serviceLogos.dataAI}
             title="Data & AI"
             description="Harness the power of data analytics and artificial intelligence to drive business insights."
+            link="/services/data-ai"
           />
         </CardWithEffect>
 
@@ -125,6 +132,7 @@ const BentoBox1 = () => {
             icon={serviceLogos.cloud}
             title="Cloud & DevOps"
             description="Scale your infrastructure with modern cloud solutions and streamlined DevOps practices."
+            link="/services/cloud-devops"
           />
         </CardWithEffect>
 
@@ -133,6 +141,7 @@ const BentoBox1 = () => {
             icon={serviceLogos.experience}
             title="CX & Experience Design"
             description="Create exceptional customer experiences with user-centric design and innovative solutions."
+            link="/services/cx-experience-design"
           />
         </CardWithEffect>
 
@@ -141,6 +150,7 @@ const BentoBox1 = () => {
             icon={serviceLogos.marketing}
             title="Digital Marketing"
             description="Amplify your brand presence and drive growth with data-driven marketing strategies."
+            link="/services/digital-marketing"
           />
         </CardWithEffect>
       </div>
